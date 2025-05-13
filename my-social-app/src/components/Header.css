@@ -1,0 +1,73 @@
+/* Основной стиль для шапки */
+.header {
+  background: linear-gradient(90deg, #f5f3ee 0%, #e8ded2 100%);
+  color: #3a2c1a;
+  padding: 24px 0;
+  box-shadow: 0 4px 16px rgba(58, 44, 26, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+}
+
+/* Логотип */
+.header-logo {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #7c5e3c;
+  text-shadow: 0 2px 8px rgba(124, 94, 60, 0.08);
+}
+
+/* Навигация */
+.header-nav {
+  display: flex;
+  gap: 32px;
+}
+
+.header-nav a {
+  color: #3a2c1a;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.2s;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+}
+
+.header-nav a:hover,
+.header-nav a.active {
+  color: #b89d6d;
+  border-bottom: 2px solid #b89d6d;
+}
+
+/* Кнопка профиля */
+.header-profile-btn {
+  background: #b89d6d;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 8px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(184, 157, 109, 0.12);
+  transition: background 0.2s;
+}
+
+.header-profile-btn:hover {
+  background: #a48454;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+  }
+  .header-nav {
+    gap: 16px;
+    margin-top: 12px;
+  }
+}
