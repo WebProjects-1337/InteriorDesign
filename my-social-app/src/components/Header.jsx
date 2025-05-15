@@ -42,7 +42,7 @@ function Header() {
   ];
 
   return (
-    <header style={{ width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between", padding: "18px 40px", background: "#fff", boxShadow: "0 2px 12px #e0e0e0", position: "sticky", top: 0, left: 0, zIndex: 100 }}>
+    <header style={{ width: 1200, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between", padding: "18px 40px", background: "#fff", boxShadow: "0 2px 12px #e0e0e0", position: "sticky", top: 0, left: 0, zIndex: 100 }}>
       <div style={{ display: "flex", alignItems: "center", gap: 32 }}>
         <span style={{ fontWeight: 700, fontSize: 26, color: "#0984e3" }}>InteriorDesign</span>
         <nav style={{ display: "flex", gap: 24 }}>
