@@ -15,7 +15,7 @@ function DesignerSearchPage() {
   );
 
   return (
-    <div style={{ padding: "40px 24px", background: "#fff", color: "#222", borderRadius: 16, boxShadow: "0 2px 12px #e0e0e0", maxWidth: 900, margin: "40px auto 0 auto" }}>
+    <div style={{ padding: "40px 24px", background: "#fff", color: "#222", boxShadow: "0 2px 12px #e0e0e0", width: "1234px", margin: "0 auto 0 auto" }}>
       <h1 style={{ color: "#0984e3" }}>Поиск дизайнера</h1>
       <p>Введите имя или город, чтобы найти дизайнера интерьера.</p>
       <input
@@ -25,7 +25,7 @@ function DesignerSearchPage() {
         onChange={e => setQuery(e.target.value)}
         style={{ padding: 8, width: 300, margin: "16px 0", borderRadius: 4, border: "1px solid #ccc" }}
       />
-      <div style={{ display: "flex", gap: 24, flexWrap: "wrap", marginTop: 16 }}>
+      <div style={{ display: "flex", gap: 24, flexWrap: "wrap", marginTop: 16, justifyContent: "center" }}>
         {filtered.length === 0 && <div>Дизайнеры не найдены.</div>}
         {filtered.map((d, idx) => (
           <div key={idx} style={{ width: 260, border: "1px solid #eee", borderRadius: 8, padding: 16, background: "#fafbfc" }}>

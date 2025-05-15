@@ -2,7 +2,7 @@ import React from "react";
 
 function GalleryPage() {
   return (
-    <div style={{ padding: "40px 24px", background: "#fff", color: "#222", borderRadius: 16, boxShadow: "0 2px 12px #e0e0e0", maxWidth: 900, margin: "40px auto 0 auto" }}>
+    <div style={{ padding: "40px 24px", background: "#fff", color: "#222", borderRadius: 0, boxShadow: "0 2px 12px #e0e0e0", maxWidth: 1400, margin: "0 auto" }}>
       <h1 style={{ color: "#0984e3" }}>Галерея проектов</h1>
       <p>Здесь вы найдете лучшие работы дизайнеров интерьера. Вдохновляйтесь современными решениями и находите идеи для своего дома!</p>
       <div style={{ display: "flex", gap: "24px", flexWrap: "wrap", marginTop: 32, justifyContent: "center" }}>

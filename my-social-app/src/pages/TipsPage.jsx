@@ -2,7 +2,7 @@ import React from "react";
 
 function TipsPage() {
   return (
-    <div style={{ padding: "40px 24px", background: "#fff", color: "#222", borderRadius: 16, boxShadow: "0 2px 12px #e0e0e0", maxWidth: 900, margin: "40px auto 0 auto" }}>
+    <div style={{ padding: "40px 24px", background: "#fff", color: "#222", boxShadow: "0 2px 12px #e0e0e0", width: "1234px", margin: 0 }}>
       <h1 style={{ color: "#0984e3" }}>Советы по интерьеру</h1>
       <p>Полезные рекомендации для создания стильного и уютного интерьера.</p>
       <ul style={{ marginTop: 32, fontSize: 18, lineHeight: 1.7 }}>
