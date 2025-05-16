@@ -72,7 +72,11 @@ function Header() {
         {user ? (
           <>
             <img
-              src={user?.avatarUrl || user?.avatar || defaultAvatar}
+              src={
+                user?.avatarUrl
+                  ? user.avatarUrl
+                  : `https://ui-avatars.com/api/?name=${encodeURIComponent(user?.name || user?.email || 'U')}`
+              }
               alt="avatar"
               style={{ width: 44, height: 44, borderRadius: "50%", cursor: "pointer", border: "2px solid #eee" }}
               onClick={() => setMenuOpen((v) => !v)}

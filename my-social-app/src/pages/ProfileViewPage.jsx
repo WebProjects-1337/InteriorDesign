@@ -32,9 +32,14 @@ function ProfileViewPage() {
   };
 
   const handleSave = () => {
+    // Обновляем пользователя в массиве users
+    const users = JSON.parse(localStorage.getItem('users')) || [];
     const updatedUser = { ...user, email, password, avatarUrl, name };
-    localStorage.setItem('user', JSON.stringify(updatedUser));
-    setUser(updatedUser); // обновляем user в состоянии
+    const updatedUsers = users.map(u => u.email === user.email ? updatedUser : u);
+    localStorage.setItem('users', JSON.stringify(updatedUsers));
+    // Обновляем currentUser
+    localStorage.setItem('currentUser', JSON.stringify(updatedUser));
+    setUser(updatedUser);
     setEditMode(false);
   };
 
