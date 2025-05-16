@@ -6,11 +6,15 @@ import './Header.css';
 const defaultAvatar = "https://ui-avatars.com/api/?name=User&background=2563eb&color=fff";
 
 function Header() {
-  const user = getCurrentUser();
+  const [user, setUser] = useState(getCurrentUser());
   const location = useLocation();
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
+
+  useEffect(() => {
+    setUser(getCurrentUser());
+  }, [location.pathname]);
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -44,18 +48,18 @@ function Header() {
   return (
     <header style={{ width: 1202, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between", padding: "18px 40px", background: "#fff", boxShadow: "0 2px 12px #e0e0e0", position: "sticky", top: 0, left: 0, zIndex: 100 }}>
       <div style={{ display: "flex", alignItems: "center", gap: 32 }}>
-        <span style={{ fontWeight: 700, fontSize: 26, color: "#0984e3" }}>Сайт коллекционеров</span>
+        <span style={{ fontWeight: 700, fontSize: 26, color: "#059669" }}>Сайт коллекционеров</span>
         <nav style={{ display: "flex", gap: 24 }}>
           {navLinks.map(link => (
             <Link
               key={link.to}
               to={link.to}
               style={{
-                color: location.pathname === link.to ? "#2563eb" : "#555",
+                color: location.pathname === link.to ? "#059669" : "#22c55e",
                 fontWeight: location.pathname === link.to ? 700 : 500,
                 textDecoration: "none",
                 fontSize: 18,
-                borderBottom: location.pathname === link.to ? "2px solid #2563eb" : "none",
+                borderBottom: location.pathname === link.to ? "2px solid #059669" : "none",
                 paddingBottom: 2
               }}
             >
@@ -68,7 +72,7 @@ function Header() {
         {user ? (
           <>
             <img
-              src={user.avatar || defaultAvatar}
+              src={user?.avatarUrl || user?.avatar || defaultAvatar}
               alt="avatar"
               style={{ width: 44, height: 44, borderRadius: "50%", cursor: "pointer", border: "2px solid #eee" }}
               onClick={() => setMenuOpen((v) => !v)}
