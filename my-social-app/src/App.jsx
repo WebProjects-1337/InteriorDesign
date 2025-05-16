@@ -10,6 +10,9 @@ import RegisterPage from './pages/RegisterPage';
 import ProfilePage from './pages/ProfilePage';
 import PrivateRoute from './components/PrivateRoute';
 import Header from './components/Header';
+import StampsPage from './pages/StampsPage';
+import CoinsPage from './pages/CoinsPage';
+import PostcardsPage from './pages/PostcardsPage';
 
 function AppLayout() {
   const location = useLocation();
@@ -40,6 +43,31 @@ function AppLayout() {
           element={
             <PrivateRoute>
               <ProfilePage />
+            </PrivateRoute>
+          }
+        />
+
+        <Route
+          path="/stamps"
+          element={
+            <PrivateRoute>
+              <StampsPage />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/coins"
+          element={
+            <PrivateRoute>
+              <CoinsPage />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/postcards"
+          element={
+            <PrivateRoute>
+              <PostcardsPage />
             </PrivateRoute>
           }
         />

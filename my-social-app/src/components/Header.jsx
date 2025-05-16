@@ -23,13 +23,13 @@ function Header() {
       <nav>
         {user ? (
           <>
-            <Link to="/">Главная</Link>
-            <Link to="/profile">Профиль</Link>
+            <Link to="/" style={{ marginRight: '16px' }}>Главная</Link>
+            <Link to="/profile" style={{ marginRight: '16px' }}>Профиль</Link>
             <button onClick={handleLogout}>Выйти</button>
           </>
         ) : (
           <>
-            <Link to="/login">Вход</Link>
+            <Link to="/login" style={{ marginRight: '16px' }}>Вход</Link>
             <Link to="/register">Регистрация</Link>
           </>
         )}
