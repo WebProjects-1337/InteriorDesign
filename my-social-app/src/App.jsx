@@ -7,7 +7,7 @@ import { getCurrentUser } from './utils/auth';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
-import ProfilePage from './pages/ProfilePage';
+import ProfilePage from './pages/ProfileViewPage';
 import PrivateRoute from './components/PrivateRoute';
 import Header from './components/Header';
 import StampsPage from './pages/StampsPage';

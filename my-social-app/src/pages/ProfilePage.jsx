@@ -30,7 +30,7 @@ function ProfilePage() {
       });
 
       if (response.ok) {
-        localStorage.setItem('currentUser', JSON.stringify({ email, password }));
+        localStorage.setItem('user', JSON.stringify({ email, password }));
         alert('Профиль обновлён!');
       } else {
         alert('Ошибка при обновлении профиля');
@@ -47,26 +47,28 @@ function ProfilePage() {
   };
 
   return (
-    <div>
-      <h2>Профиль</h2>
-      <label>
+    <div style={{ maxWidth: 400, margin: '2rem auto', background: '#fff', borderRadius: 12, boxShadow: '0 2px 12px #e0e7ef', padding: '2rem', textAlign: 'center' }}>
+      <h2 style={{ color: '#2563eb', marginBottom: 24 }}>Профиль</h2>
+      <label style={{ color: '#222', fontWeight: 500 }}>
         Email:<br />
         <input
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          style={{ width: '100%', padding: '0.5rem', borderRadius: 6, border: '1px solid #cbd5e1', marginTop: 4 }}
         />
       </label><br /><br />
-      <label>
+      <label style={{ color: '#222', fontWeight: 500 }}>
         Пароль:<br />
         <input
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          style={{ width: '100%', padding: '0.5rem', borderRadius: 6, border: '1px solid #cbd5e1', marginTop: 4 }}
         />
       </label><br /><br />
-      <button onClick={handleSave}>Сохранить</button>
-      <button onClick={handleLogout} style={{ marginLeft: '1rem' }}>Выйти</button>
+      <button onClick={handleSave} style={{ padding: '0.6rem 1.5rem', background: '#2563eb', color: '#fff', border: 'none', borderRadius: 8, fontWeight: 500, cursor: 'pointer' }}>Сохранить</button>
+      <button onClick={handleLogout} style={{ marginLeft: '1rem', padding: '0.6rem 1.5rem', background: '#e0e7ef', color: '#2563eb', border: 'none', borderRadius: 8, fontWeight: 500, cursor: 'pointer' }}>Выйти</button>
     </div>
   );
 }
