@@ -64,7 +64,7 @@ function ProfilePage() {
   };
 
   return (
-    <div style={{ padding: "40px 24px", background: "#fff", color: "#222", boxShadow: "0 2px 12px #e0e0e0", width: "100%" }}>
+    <div style={{ padding: "40px 24px", background: "#fff", color: "#222", boxShadow: "0 2px 12px #e0e0e0", width: "100%", maxWidth: "1234px", margin: "0 auto" }}>
       <h2 style={{ color: "#0984e3" }}>Профиль</h2>
       <div style={{ textAlign: "center", marginBottom: 24 }}>
         <img src={avatar} alt="avatar" style={{ width: 96, height: 96, borderRadius: "50%", objectFit: "cover", border: "2px solid #eee" }} />
